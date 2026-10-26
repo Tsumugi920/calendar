@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>calendar 日程管理</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">📅</span>
+      <div><strong>calendar</strong><small>日程管理</small></div>
+    </div>
+
+    <div class="month-nav">
+      <button id="prevMonthBtn" class="btn icon" title="上个月">‹</button>
+      <h1 id="monthLabel" class="month-label">—</h1>
+      <button id="nextMonthBtn" class="btn icon" title="下个月">›</button>
+      <button id="todayBtn" class="btn ghost">今天</button>
+    </div>
+
+    <div class="tools">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input id="searchInput" type="search" placeholder="搜索事件：标题 / 地点 / 备注" autocomplete="off" />
+        <button id="clearSearchBtn" class="clear-btn" hidden title="清除搜索">✕</button>
+      </div>
+      <button id="addEventBtn" class="btn primary">＋ 添加事件</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="calendar-panel card">
+      <div class="weekday-row">
+        <div>日</div><div>一</div><div>二</div><div>三</div><div>四</div><div>五</div><div>六</div>
+      </div>
+      <div id="calendarGrid" class="calendar-grid" aria-label="月视图日历"></div>
+    </section>
+
+    <aside class="side-panel">
+      <div class="card reminder-card">
+        <div class="reminder-head">🔔 提醒汇总 <span id="reminderTotal" class="pill">0</span></div>
+        <div id="reminderStats" class="reminder-stats">加载中…</div>
+      </div>
+
+      <div class="card list-card">
+        <div class="list-head">
+          <h2 id="listTitle">今日事件</h2>
+          <span id="listCount" class="pill">0</span>
+        </div>
+        <div id="eventList" class="event-list"></div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- 添加 / 编辑事件弹窗 -->
+  <div id="modalOverlay" class="modal-overlay" hidden>
+    <div class="modal card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <h3 id="modalTitle">添加事件</h3>
+        <button id="modalCloseBtn" class="btn icon" type="button" title="关闭">✕</button>
+      </div>
+      <form id="eventForm" novalidate>
+        <input type="hidden" id="fieldId" />
+
+        <label class="field">标题 <span class="req">*</span>
+          <input id="fieldTitle" type="text" maxlength="60" placeholder="例如：项目评审会" required />
+        </label>
+
+        <div class="field-row">
+          <label class="field">日期 <span class="req">*</span>
+            <input id="fieldDate" type="date" required />
+          </label>
+          <label class="field">时间
+            <input id="fieldTime" type="time" />
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label class="field">地点
+            <input id="fieldLocation" type="text" maxlength="60" placeholder="例如：3 号会议室" />
+          </label>
+          <label class="field">分类
+            <select id="fieldCategory">
+              <option value="工作">工作</option>
+              <option value="个人">个人</option>
+              <option value="学习">学习</option>
+              <option value="生活">生活</option>
+              <option value="其他">其他</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="field">备注
+          <textarea id="fieldNotes" rows="3" maxlength="200" placeholder="补充说明（可选）"></textarea>
+        </label>
+
+        <label class="check-field">
+          <input id="fieldReminder" type="checkbox" />
+          <span>⏰ 到期提醒（开启后事件会显示 🔔，并计入提醒汇总）</span>
+        </label>
+
+        <div class="modal-foot">
+          <button type="button" id="deleteEventBtn" class="btn danger" hidden>删除事件</button>
+          <div class="foot-spacer"></div>
+          <button type="button" id="cancelBtn" class="btn ghost">取消</button>
+          <button type="submit" id="submitBtn" class="btn primary">保存</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
