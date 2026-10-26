@@ -1,0 +1,148 @@
+{
+  "events": [
+    {
+      "id": "evt-01",
+      "title": "数据库例行备份检查",
+      "date": "2026-09-15",
+      "time": "16:00",
+      "location": "运维后台（线上）",
+      "category": "工作",
+      "notes": "核对上周全量备份与增量日志归档是否完整。",
+      "reminder": false,
+      "createdAt": "2026-09-01T02:30:00.000Z",
+      "updatedAt": "2026-09-01T02:30:00.000Z"
+    },
+    {
+      "id": "evt-02",
+      "title": "团队周会",
+      "date": "2026-10-12",
+      "time": "09:30",
+      "location": "3 号会议室",
+      "category": "工作",
+      "notes": "同步本周迭代进度、阻塞项与发布计划。",
+      "reminder": true,
+      "createdAt": "2026-10-05T01:00:00.000Z",
+      "updatedAt": "2026-10-05T01:00:00.000Z"
+    },
+    {
+      "id": "evt-03",
+      "title": "牙医复诊预约",
+      "date": "2026-10-18",
+      "time": "14:00",
+      "location": "市中心口腔医院",
+      "category": "生活",
+      "notes": "带上次拍的牙片，提前 15 分钟到。",
+      "reminder": true,
+      "createdAt": "2026-10-08T06:20:00.000Z",
+      "updatedAt": "2026-10-08T06:20:00.000Z"
+    },
+    {
+      "id": "evt-04",
+      "title": "健身房团课：搏击操",
+      "date": "2026-10-24",
+      "time": "19:00",
+      "location": "楼下威尔仕健身房",
+      "category": "生活",
+      "notes": "",
+      "reminder": false,
+      "createdAt": "2026-10-10T09:00:00.000Z",
+      "updatedAt": "2026-10-10T09:00:00.000Z"
+    },
+    {
+      "id": "evt-05",
+      "title": "项目评审会",
+      "date": "2026-10-25",
+      "time": "10:00",
+      "location": "5 号会议室 / 线上腾讯会议",
+      "category": "工作",
+      "notes": "演示 v2.3 方案，提前 10 分钟到场调试投屏。",
+      "reminder": true,
+      "createdAt": "2026-10-16T03:40:00.000Z",
+      "updatedAt": "2026-10-16T03:40:00.000Z"
+    },
+    {
+      "id": "evt-06",
+      "title": "晨跑 5 公里",
+      "date": "2026-10-26",
+      "time": "08:30",
+      "location": "滨江公园",
+      "category": "生活",
+      "notes": "",
+      "reminder": false,
+      "createdAt": "2026-10-17T12:00:00.000Z",
+      "updatedAt": "2026-10-17T12:00:00.000Z"
+    },
+    {
+      "id": "evt-07",
+      "title": "客户需求沟通",
+      "date": "2026-10-28",
+      "time": "15:00",
+      "location": "腾讯会议（线上）",
+      "category": "工作",
+      "notes": "确认二期功能排期与验收标准，会前发出议程。",
+      "reminder": true,
+      "createdAt": "2026-10-18T07:10:00.000Z",
+      "updatedAt": "2026-10-18T07:10:00.000Z"
+    },
+    {
+      "id": "evt-08",
+      "title": "万圣节聚餐",
+      "date": "2026-10-31",
+      "time": "18:30",
+      "location": "万象城 L5 山姆厨房",
+      "category": "个人",
+      "notes": "提前订位，准备小礼物。",
+      "reminder": true,
+      "createdAt": "2026-10-19T08:00:00.000Z",
+      "updatedAt": "2026-10-19T08:00:00.000Z"
+    },
+    {
+      "id": "evt-09",
+      "title": "季度目标规划会",
+      "date": "2026-11-03",
+      "time": "09:00",
+      "location": "大会议室",
+      "category": "工作",
+      "notes": "带上 Q3 复盘数据，讨论 Q4 OKR。",
+      "reminder": true,
+      "createdAt": "2026-10-20T02:00:00.000Z",
+      "updatedAt": "2026-10-20T02:00:00.000Z"
+    },
+    {
+      "id": "evt-10",
+      "title": "电影之夜：《沙丘 3》",
+      "date": "2026-11-06",
+      "time": "20:00",
+      "location": "万象影城 IMAX 厅",
+      "category": "个人",
+      "notes": "提前买好 IMAX 场次票。",
+      "reminder": false,
+      "createdAt": "2026-10-20T05:30:00.000Z",
+      "updatedAt": "2026-10-20T05:30:00.000Z"
+    },
+    {
+      "id": "evt-11",
+      "title": "线上技术分享：Express 进阶实践",
+      "date": "2026-11-11",
+      "time": "11:00",
+      "location": "飞书直播",
+      "category": "学习",
+      "notes": "主讲中间件原理与错误处理最佳实践。",
+      "reminder": true,
+      "createdAt": "2026-10-21T03:00:00.000Z",
+      "updatedAt": "2026-10-21T03:00:00.000Z"
+    },
+    {
+      "id": "evt-12",
+      "title": "年度体检",
+      "date": "2026-11-20",
+      "time": "09:00",
+      "location": "爱康国宾体检中心",
+      "category": "生活",
+      "notes": "空腹前往，携带身份证。",
+      "reminder": true,
+      "createdAt": "2026-10-21T06:45:00.000Z",
+      "updatedAt": "2026-10-21T06:45:00.000Z"
+    }
+  ]
+}
